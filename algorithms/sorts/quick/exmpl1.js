@@ -42,9 +42,6 @@ function sort(array, less) {
   return array;
 }
 
-var sorted_array = sort(numArr, (a,b) => { return a<b; });
-var sorted_array2 = sort(strArr, (a,b) => { return a<b; });
-
-console.log(sorted_array, sorted_array2 );
-
+console.log(sort(numArr, (a,b) => { return a<b; }));
+console.log(sort(strArr, (a,b) => { return a<b; }));
 
