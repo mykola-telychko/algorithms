@@ -1,5 +1,7 @@
 <?php
 
+// https://rosettacode.org/wiki/Sorting_algorithms/Merge_sort
+
 $numArr = [2, 32, 53, 37, 60, 90, 1];
 $strArr = ['AB', 'GF', 'YJ', 'KU', 'ER', 'BG', 'HD'];
 
