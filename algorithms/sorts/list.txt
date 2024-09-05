@@ -2,7 +2,7 @@
 
 Сортування вставками (Insertion Sort)
 
-Сортування вибором (Selection Sort) 
+Сортування вибором (Selection Sort) +
 
 Швидке сортування (Quick Sort) +
 
