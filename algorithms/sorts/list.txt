@@ -1,6 +1,6 @@
 Сортування бульбашкою (Bubble Sort) +
 
-Сортування вставками (Insertion Sort)
+Сортування вставками (Insertion Sort) +
 
 Сортування вибором (Selection Sort) +
 
