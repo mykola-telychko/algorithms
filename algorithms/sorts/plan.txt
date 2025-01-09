@@ -1,3 +1,6 @@
+- create table with o-notation for each sort-algo
+
+list:
 Сортування бульбашкою (Bubble Sort) +
 
 Сортування вставками (Insertion Sort) +
