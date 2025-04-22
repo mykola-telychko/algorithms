@@ -1,4 +1,7 @@
 - create table with o-notation for each sort-algo
+- exercices in order to remember all basic algor
+- rec video and audio (theory and explanations)
+
 
 list:
 Сортування бульбашкою (Bubble Sort) +
