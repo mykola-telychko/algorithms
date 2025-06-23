@@ -1,0 +1,1 @@
+https://github.com/mykola-telychko/js-array-queue/blob/main/index.js

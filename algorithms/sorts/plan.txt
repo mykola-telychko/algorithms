@@ -2,6 +2,8 @@
 - exercices in order to remember all basic algor
 - rec video and audio (theory and explanations)
 
+add and describe 
+https://github.com/mykola-telychko/js-array-queue/blob/main/index.js
 
 list:
 Сортування бульбашкою (Bubble Sort) +
