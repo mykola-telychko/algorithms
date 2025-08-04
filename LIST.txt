@@ -1,0 +1,10 @@
+timur+ilia Big-O
+https://www.youtube.com/watch?v=wVEi2B5edQY
+
+1) bigO-notation -- as for js (murych)
+https://www.youtube.com/watch?v=Qfi0_0w0dsM
+ninjajs reaction 
+https://www.youtube.com/watch?v=icFnYqcNRxE
+
+2) algorithms complexity -- as for js (murych)
+https://www.youtube.com/watch?v=_36Z4U07o3g
