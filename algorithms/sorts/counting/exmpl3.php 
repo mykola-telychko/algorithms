@@ -1,0 +1,42 @@
+<?php
+function optimizedCountSort($arr) {
+    if (empty($arr)) {
+        return $arr;
+    }
+    
+    $min = min($arr);
+    $max = max($arr);
+    $range = $max - $min + 1;
+    
+    // Initialize count array with zeros
+    $count = array_fill(0, $range, 0);
+    
+    // Count occurrences
+    foreach ($arr as $num) {
+        $count[$num - $min]++;
+    }
+    
+    // Modify count array to store cumulative counts
+    for ($i = 1; $i < $range; $i++) {
+        $count[$i] += $count[$i - 1];
+    }
+    
+    // Build output array
+    $output = array_fill(0, count($arr), 0);
+    
+    // Build the output array in reverse to maintain stability
+    for ($i = count($arr) - 1; $i >= 0; $i--) {
+        $output[$count[$arr[$i] - $min] - 1] = $arr[$i];
+        $count[$arr[$i] - $min]--;
+    }
+    
+    return $output;
+}
+
+// Example usage
+$data = [4, 2, 2, 8, 3, 3, 1, -1, 0, 5];
+echo "Original: " . implode(', ', $data) . "\n";
+
+$sorted = optimizedCountSort($data);
+echo "Sorted: " . implode(', ', $sorted) . "\n";
+?>
