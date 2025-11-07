@@ -1,8 +1,8 @@
 <?php
+
 function optimizedCountSort($arr) {
-    if (empty($arr)) {
-        return $arr;
-    }
+
+    if (empty($arr)) { return $arr; }
     
     $min = min($arr);
     $max = max($arr);
