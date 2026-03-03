@@ -8,3 +8,13 @@ https://www.youtube.com/watch?v=icFnYqcNRxE
 
 2) algorithms complexity -- as for js (murych)
 https://www.youtube.com/watch?v=_36Z4U07o3g
+
+---- 
+> YWA:
+https://cp-algorithms.com/
+
+> YWA:
+https://github.com/TheAlgorithms/PHP/blob/master/Sorting/BubbleSort.php
+
+> YWA:
+https://the-algorithms.com/
