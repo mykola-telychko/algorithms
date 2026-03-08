@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algorithms</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght:700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'JetBrains Mono', monospace;
+            background: #F5F7FA;
+            color: #2D3748;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        /* Header */
+        header {
+            max-width: 1200px;
+            margin: 0 auto 40px;
+            padding: 20px 0;
+            border-bottom: 2px solid #4A5568;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Orbitron', monospace;
+            font-size: 2rem;
+            font-weight: 700;
+            color: #4A5568;
+            letter-spacing: 2px;
+        }
+
+        nav {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            color: #4A5568;
+            text-decoration: none;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #718096;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Main content */
+        main {
+            margin-bottom: 60px;
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #2D3748;
+            font-weight: 600;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            margin: 40px 0 20px;
+            color: #2D3748;
+            font-weight: 600;
+        }
+
+        p {
+            margin-bottom: 20px;
+            font-size: 0.95rem;
+            color: #4A5568;
+        }
+
+        /* Links */
+        a.external-link {
+            color: #5A67D8;
+            text-decoration: none;
+            border-bottom: 2px solid #5A67D8;
+            transition: all 0.3s;
+            font-weight: 600;
+        }
+
+        a.external-link:hover {
+            color: #4C51BF;
+            border-bottom-color: #4C51BF;
+        }
+
+        /* Code blocks */
+        code {
+            background: #E2E8F0;
+            color: #2D3748;
+            padding: 2px 6px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.9rem;
+        }
+
+        pre {
+            background: #E2E8F0;
+            border-left: 4px solid #5A67D8;
+            padding: 20px;
+            margin: 20px 0;
+            overflow-x: auto;
+        }
+
+        pre code {
+            background: transparent;
+            padding: 0;
+            display: block;
+        }
+
+        /* Cards grid */
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .card {
+            background: #FFFFFF;
+            border: 2px solid #CBD5E0;
+            transition: all 0.3s;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+        .card:hover {
+            border-color: #5A67D8;
+            transform: translateY(-2px);
+        }
+
+        .card-image {
+            width: 100%;
+            height: 200px;
+            background: #E2E8F0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: #A0AEC0;
+        }
+
+        .card-content {
+            padding: 20px;
+        }
+
+        .card-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: #2D3748;
+        }
+
+        .card-description {
+            font-size: 0.85rem;
+            color: #718096;
+            line-height: 1.5;
+        }
+
+        .card-tag {
+            display: inline-block;
+            background: #E2E8F0;
+            color: #4A5568;
+            padding: 4px 12px;
+            font-size: 0.75rem;
+            margin-top: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Footer */
+        footer {
+            max-width: 1200px;
+            margin: 60px auto 0;
+            padding: 20px 0;
+            border-top: 2px solid #4A5568;
+            text-align: center;
+            color: #718096;
+            font-size: 0.85rem;
+        }
+
+        /* Mobile */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 20px;
+                text-align: center;
+            }
+
+            .logo {
+                font-size: 1.5rem;
+            }
+
+            nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            h2 {
+                font-size: 1.2rem;
+            }
+
+            .cards-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">ALGORITHMS</div>
+        <nav>
+            <a href="#basics">Основи</a>
+            <a href="#structures">Структури</a>
+            <a href="#sorting">Сортування</a>
+            <a href="#resources">Ресурси</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <main>
+            <h1>Вивчення алгоритмів та структур даних</h1>
+            
+            <p>Алгоритми — це основа програмування. Вони визначають, як ми обробляємо дані, вирішуємо задачі та оптимізуємо продуктивність наших програм. На цьому сайті ви знайдете матеріали для вивчення найважливіших алгоритмів та структур даних.</p>
+
+            <p>Більше матеріалів на <a href="https://github.com" class="external-link">GitHub</a> та <a href="https://stackoverflow.com" class="external-link">Stack Overflow</a>.</p>
+
+            <h2>Приклад коду</h2>
+            
+            <p>Ось простий приклад алгоритму бінарного пошуку на Python:</p>
+
+            <pre><code>def binary_search(arr, target):
+    left, right = 0, len(arr) - 1
+    
+    while left <= right:
+        mid = (left + right) // 2
+        
+        if arr[mid] == target:
+            return mid
+        elif arr[mid] < target:
+            left = mid + 1
+        else:
+            right = mid - 1
+    
+    return -1</code></pre>
+
+            <p>Складність цього алгоритму становить <code>O(log n)</code>, що робить його дуже ефективним для пошуку в відсортованих масивах.</p>
+
+            <h2 id="resources">Корисні ресурси</h2>
+
+            <div class="cards-grid">
+                <a href="https://youtube.com" class="card">
+                    <div class="card-image">▶</div>
+                    <div class="card-content">
+                        <div class="card-title">Основи алгоритмів</div>
+                        <div class="card-description">Відеоуроки про базові алгоритми та структури даних для початківців</div>
+                        <span class="card-tag">YouTube</span>
+                    </div>
+                </a>
+
+                <a href="https://youtube.com" class="card">
+                    <div class="card-image">▶</div>
+                    <div class="card-content">
+                        <div class="card-title">Алгоритми сортування</div>
+                        <div class="card-description">Детальний розбір всіх популярних алгоритмів сортування з візуалізацією</div>
+                        <span class="card-tag">YouTube</span>
+                    </div>
+                </a>
+
+                <a href="https://youtube.com" class="card">
+                    <div class="card-image">▶</div>
+                    <div class="card-content">
+                        <div class="card-title">Графи та дерева</div>
+                        <div class="card-description">Вивчення складних структур даних: графи, дерева, обходи та алгоритми на них</div>
+                        <span class="card-tag">YouTube</span>
+                    </div>
+                </a>
+
+                <a href="https://youtube.com" class="card">
+                    <div class="card-image">▶</div>
+                    <div class="card-content">
+                        <div class="card-title">Динамічне програмування</div>
+                        <div class="card-description">Розв'язання складних задач за допомогою динамічного програмування</div>
+                        <span class="card-tag">YouTube</span>
+                    </div>
+                </a>
+
+                <a href="https://youtube.com" class="card">
+                    <div class="card-image">▶</div>
+                    <div class="card-content">
+                        <div class="card-title">LeetCode розбори</div>
+                        <div class="card-description">Покрокові рішення популярних задач з LeetCode та HackerRank</div>
+                        <span class="card-tag">YouTube</span>
+                    </div>
+                </a>
+
+                <a href="https://youtube.com" class="card">
+                    <div class="card-image">▶</div>
+                    <div class="card-content">
+                        <div class="card-title">Підготовка до інтерв'ю</div>
+                        <div class="card-description">Найчастіші питання на співбесідах та як правильно на них відповідати</div>
+                        <span class="card-tag">YouTube</span>
+                    </div>
+                </a>
+            </div>
+
+            <h2>Про складність алгоритмів</h2>
+
+            <p>Часова складність — це міра того, як швидко працює алгоритм залежно від розміру вхідних даних. Найпоширеніші класи складності:</p>
+
+            <ul style="margin-left: 20px; margin-bottom: 20px;">
+                <li><code>O(1)</code> — константна</li>
+                <li><code>O(log n)</code> — логарифмічна</li>
+                <li><code>O(n)</code> — лінійна</li>
+                <li><code>O(n log n)</code> — лінійно-логарифмічна</li>
+                <li><code>O(n²)</code> — квадратична</li>
+            </ul>
+
+        </main>
+    </div>
+
+    <footer>
+        © 2025 Algorithms | Всі матеріали у вільному доступі
+    </footer>
+</body>
+</html>
