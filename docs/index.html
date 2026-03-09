@@ -156,6 +156,13 @@
             justify-content: center;
             font-size: 3rem;
             color: #A0AEC0;
+            overflow: hidden;
+        }
+
+        .card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
         .card-content {
@@ -177,13 +184,27 @@
 
         .card-tag {
             display: inline-block;
-            background: #E2E8F0;
+            background: #fcdddd;
+            /* background: #E2E8F0; */
             color: #4A5568;
             padding: 4px 12px;
             font-size: 0.75rem;
             margin-top: 10px;
             text-transform: uppercase;
             letter-spacing: 1px;
+        }
+
+        .card-tag.resource {
+            background: #E2E8F0;
+        }
+
+        .card-tag.article {
+            background: #FFF3CD;
+        }
+
+        .card-tag.book {
+            background: #c6ccff;
+            /* color: white; */
         }
 
         /* Footer */
@@ -273,7 +294,7 @@
 
             <div class="cards-grid">
                 <a href="https://youtube.com" class="card">
-                    <div class="card-image">▶</div>
+                    <div class="card-image"><img src="" alt="Відео"></div>
                     <div class="card-content">
                         <div class="card-title">Основи алгоритмів</div>
                         <div class="card-description">Відеоуроки про базові алгоритми та структури даних для початківців</div>
@@ -282,7 +303,7 @@
                 </a>
 
                 <a href="https://youtube.com" class="card">
-                    <div class="card-image">▶</div>
+                    <div class="card-image"><img src="" alt="Відео"></div>
                     <div class="card-content">
                         <div class="card-title">Алгоритми сортування</div>
                         <div class="card-description">Детальний розбір всіх популярних алгоритмів сортування з візуалізацією</div>
@@ -291,7 +312,7 @@
                 </a>
 
                 <a href="https://youtube.com" class="card">
-                    <div class="card-image">▶</div>
+                    <div class="card-image"><img src="" alt="Відео"></div>
                     <div class="card-content">
                         <div class="card-title">Графи та дерева</div>
                         <div class="card-description">Вивчення складних структур даних: графи, дерева, обходи та алгоритми на них</div>
@@ -300,7 +321,7 @@
                 </a>
 
                 <a href="https://youtube.com" class="card">
-                    <div class="card-image">▶</div>
+                    <div class="card-image"><img src="" alt="Відео"></div>
                     <div class="card-content">
                         <div class="card-title">Динамічне програмування</div>
                         <div class="card-description">Розв'язання складних задач за допомогою динамічного програмування</div>
@@ -309,7 +330,7 @@
                 </a>
 
                 <a href="https://youtube.com" class="card">
-                    <div class="card-image">▶</div>
+                    <div class="card-image"><img src="" alt="Відео"></div>
                     <div class="card-content">
                         <div class="card-title">LeetCode розбори</div>
                         <div class="card-description">Покрокові рішення популярних задач з LeetCode та HackerRank</div>
@@ -318,7 +339,7 @@
                 </a>
 
                 <a href="https://youtube.com" class="card">
-                    <div class="card-image">▶</div>
+                    <div class="card-image"><img src="" alt="Відео"></div>
                     <div class="card-content">
                         <div class="card-title">Підготовка до інтерв'ю</div>
                         <div class="card-description">Найчастіші питання на співбесідах та як правильно на них відповідати</div>
@@ -326,8 +347,36 @@
                     </div>
                 </a>
 
+                <a href="https://www.youtube.com/watch?v=9Gtwj0Eo8IY" class="card">
+                    <div class="card-image"><img src="https://img.youtube.com/vi/9Gtwj0Eo8IY/maxresdefault.jpg" alt="Відео">
+                    </div>
+                    <div class="card-content">
+                        <div class="card-title">Чому алгоритми важливі? Розберемо на прикладі</div>
+                        <div class="card-description">Віктор Турський</div>
+                        <span class="card-tag">YouTube</span>
+                    </div>
+                </a>
+
+                <a href="https://www.youtube.com/playlist?list=PLOtl7M3yp-DXbHTFe_w9zFPXeau28CDao" class="card">
+                    <div class="card-image"><img src="https://img.youtube.com/vi/dphSwq5jP1A/maxresdefault.jpg" alt="Відео"></div>
+                    <div class="card-content">
+                        <div class="card-title">Steven Skiena / Lectures</div>
+                        <div class="card-description">Лекції по алгоримам від Стівена Скієни</div>
+                        <span class="card-tag">YouTube</span>
+                    </div>
+                </a>
+
+                <a href="https://www.youtube.com/playlist?list=PLUl4u3cNGP63EdVPNLG3ToM6LaEUuStEY" class="card">
+                    <div class="card-image"><img src="https://img.youtube.com/vi/CHhwJjR0mZA/0.jpg" alt="Відео"></div>
+                    <div class="card-content">
+                        <div class="card-title">MIT / Lectures</div>
+                        <div class="card-description">Introduction to Algorithms, Spring 2020</div>
+                        <span class="card-tag">YouTube</span>
+                    </div>
+                </a>
+
                 <a href="https://www.youtube.com/watch?v=XTgWz_9MR_s" class="card">
-                    <div class="card-image">▶</div>
+                    <div class="card-image"><img src="" alt="Відео"></div>
                     <div class="card-content">
                         <div class="card-title">Big-O. Сладність алгоритмів | AlexanderLukash</div>
                         <div class="card-description">Найчастіші питання на співбесідах та як правильно на них відповідати</div>
@@ -336,7 +385,7 @@
                 </a>
 
                 <a href="https://www.youtube.com/playlist?list=PLQ2NVXJ6X6IbBkPrhwE2F-NvByARRO1be" class="card">
-                    <div class="card-image">▶</div>
+                    <div class="card-image"><img src="" alt="Відео"></div>
                     <div class="card-content">
                         <div class="card-title">Лекції О.I.Марченко</div>
                         <div class="card-description">Для студентів першого курсу</div>
@@ -345,7 +394,7 @@
                 </a>
 
                 <a href="https://www.youtube.com/playlist?list=PLVZ5b_sJYXlEJSdJoBIHm2M3DYrX-e7ko" class="card">
-                    <div class="card-image">▶</div>
+                    <div class="card-image"><img src="" alt="Відео"></div>
                     <div class="card-content">
                         <div class="card-title">Олімпіадне програмування плейліст</div>
                         <div class="card-description">Олімпіадне програмування С++</div>
@@ -353,6 +402,82 @@
                     </div>
                 </a>
 
+            </div>
+
+            <h2>Статті та книги</h2>
+
+            <div class="cards-grid">
+                <a href="https://en.wikipedia.org/wiki/Algorithm" class="card">
+                    <div class="card-image"><img src="" alt="Стаття"></div>
+                    <div class="card-content">
+                        <div class="card-title">Алгоритми (Вікіпедія)</div>
+                        <div class="card-description">Загальна стаття про алгоритми, їх визначення та класифікацію</div>
+                        <span class="card-tag article">Стаття</span>
+                    </div>
+                </a>
+
+                <a href="https://www.geeksforgeeks.org/fundamentals-of-algorithms/" class="card">
+                    <div class="card-image"><img src="" alt="Стаття"></div>
+                    <div class="card-content">
+                        <div class="card-title">Основи алгоритмів (GeeksforGeeks)</div>
+                        <div class="card-description">Детальні матеріали з основ алгоритмів та структур даних</div>
+                        <span class="card-tag article">Стаття</span>
+                    </div>
+                </a>
+
+                <a href="https://www.amazon.com/Introduction-Algorithms-3rd-MIT-Press/dp/0262033844" class="card">
+                    <div class="card-image"><img src="" alt="Книга"></div>
+                    <div class="card-content">
+                        <div class="card-title">Introduction to Algorithms (CLRS)</div>
+                        <div class="card-description">Класична книга з алгоритмів від Cormen, Leiserson, Rivest та Stein</div>
+                        <span class="card-tag book">Книга</span>
+                    </div>
+                </a>
+
+                <a href="https://www.amazon.com/Algorithms-4th-Robert-Sedgewick/dp/032157351X" class="card">
+                    <div class="card-image"><img src="" alt="Книга"></div>
+                    <div class="card-content">
+                        <div class="card-title">Algorithms (Sedgewick)</div>
+                        <div class="card-description">Книга з алгоритмами на Java від Роберта Седжвіка</div>
+                        <span class="card-tag book">Книга</span>
+                    </div>
+                </a>
+
+                <a href="https://leetcode.com/problemset/all/" class="card">
+                    <div class="card-image"><img src="" alt="Ресурс"></div>
+                    <div class="card-content">
+                        <div class="card-title">LeetCode Problems</div>
+                        <div class="card-description">Платформа для практики алгоритмічних задач</div>
+                        <span class="card-tag resource">Ресурс</span>
+                    </div>
+                </a>
+
+                <a href="https://www.hackerrank.com/domains/algorithms" class="card">
+                    <div class="card-image"><img src="" alt="Ресурс"></div>
+                    <div class="card-content">
+                        <div class="card-title">HackerRank Algorithms</div>
+                        <div class="card-description">Завдання з алгоритмів для різних рівнів складності</div>
+                        <span class="card-tag resource">Ресурс</span>
+                    </div>
+                </a>
+
+                <a href="https://visualgo.net/" class="card">
+                    <div class="card-image"><img src="" alt="Ресурс"></div>
+                    <div class="card-content">
+                        <div class="card-title">VisuAlgo</div>
+                        <div class="card-description">Візуалізація алгоритмів та структур даних</div>
+                        <span class="card-tag resource">Ресурс</span>
+                    </div>
+                </a>
+
+                <a href="https://www.bigocheatsheet.com/" class="card">
+                    <div class="card-image"><img src="" alt="Ресурс"></div>
+                    <div class="card-content">
+                        <div class="card-title">Big-O Cheat Sheet</div>
+                        <div class="card-description">Шпаргалка з часових та просторових складностей алгоритмів</div>
+                        <span class="card-tag resource">Ресурс</span>
+                    </div>
+                </a>
             </div>
 
             <h2>Про складність алгоритмів</h2>
@@ -365,6 +490,29 @@
                 <li><code>O(n)</code> — лінійна</li>
                 <li><code>O(n log n)</code> — лінійно-логарифмічна</li>
                 <li><code>O(n²)</code> — квадратична</li>
+            </ul>
+
+            <h2>Базові алгоритми сортування</h2>
+
+            <p> Посилання на різні реалізації базових алгоритмів сортуванн:</p>
+
+            <ul style="margin-left: 20px; margin-bottom: 20px;">
+                <li><code>bubble</code> — Бульбашкове сортування 
+                    <a class="external-link" href="https://github.com/mykola-telychko/algorithms/tree/main/algorithms/sorts/bubble">GH</a>,
+                    <a class="external-link" href="#">codepen</a>
+                </li>
+                <li><code>counting</code> — Підрахункове сортування 
+                    <a class="external-link" href="https://github.com/mykola-telychko/algorithms/tree/main/algorithms/sorts/counting">GH</a>, 
+                    <a class="external-link" href="#">codepen</a>
+                </li>
+                <li><code>heap</code> — купа <a class="external-link" href="https://github.com/mykola-telychko/algorithms/tree/main/algorithms/sorts/heap">GH</a> 
+                    <a class="external-link" href="#">codepen</a>
+                </li>
+                <li><code>insertion</code> — вставками <a class="external-link" href="#">GH</a> <a class="external-link" href="#">codepen</a></li>
+                <li><code>merge</code> — злиттям <a class="external-link" href="#">GH</a> <a class="external-link" href="#">codepen</a></li>
+                <li><code>quick</code> — швидке <a class="external-link" href="#">GH</a> <a class="external-link" href="#">codepen</a></li>
+                <li><code>radix</code> — по розрядах <a class="external-link" href="#">GH</a> <a class="external-link" href="#">codepen</a></li>
+                <li><code>selection</code> — вибором <a class="external-link" href="#">GH</a> <a class="external-link" href="#">codepen</a></li>
             </ul>
 
         </main>
