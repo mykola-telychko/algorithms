@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Algorithms</title>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght:700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
     <style>
         * {
             margin: 0;
@@ -205,6 +206,19 @@
         .card-tag.book {
             background: #c6ccff;
             /* color: white; */
+        }
+
+        .code-pair {
+            display: flex;
+            gap: 20px;
+            margin-top: 10px;
+        }
+
+        .code-pair pre {
+            flex: 1;
+            background: #E2E8F0;
+            padding: 10px;
+            overflow-x: auto;
         }
 
         /* Footer */
@@ -497,22 +511,132 @@
             <p> Посилання на різні реалізації базових алгоритмів сортуванн:</p>
 
             <ul style="margin-left: 20px; margin-bottom: 20px;">
-                <li><code>bubble</code> — Бульбашкове сортування 
+                <li>
+                    <code>bubble</code> — Бульбашкове сортування 
                     <a class="external-link" href="https://github.com/mykola-telychko/algorithms/tree/main/algorithms/sorts/bubble">GH</a>,
                     <a class="external-link" href="#">codepen</a>
+                    <div class="code-pair">
+                        <pre><code class="language-js">Array.prototype.bubblesort = function(){
+  var isSortedFlag = false;
+  while (!isSortedFlag) { 
+    for ( let i = 1; i < this.length; i++ ) { 
+      isSortedFlag = true;
+      if(this[i - 1] > this[i]){
+        isSortedFlag = false;
+        var tmpPrevNotSortedEl = this[i - 1];
+        this[i - 1] = this[i]; 
+        this[i] = tmpPrevNotSortedEl; 
+      }
+    }
+  }
+  return this;
+}
+console.log(["G", "F", "C", "A", "B", "E", "D"].bubblesort());
+</code></pre>
+                        <pre><code class="language-py">def bubble_sort(seq):
+    changed = True
+    while changed:
+        changed = False
+        for i in range(len(seq) - 1):
+            if seq[i] > seq[i + 1]:
+                seq[i], seq[i + 1] = seq[i + 1], seq[i]
+                changed = True
+    return seq
+
+if __name__ == "__main__":
+    fruits = ["cherry", "apple", "date", "banana"]
+    print("Original fruits list:", fruits, "\n")
+    bubble_sort(fruits)
+    print("Sorted fruits list:", fruits, "\n")</code></pre>
+                    </div>
                 </li>
-                <li><code>counting</code> — Підрахункове сортування 
+                <li>
+                    <code>counting</code> — Підрахункове сортування 
                     <a class="external-link" href="https://github.com/mykola-telychko/algorithms/tree/main/algorithms/sorts/counting">GH</a>, 
                     <a class="external-link" href="#">codepen</a>
+                    <div class="code-pair">
+                        <pre><code class="language-js">// JS counting sort
+function counting(arr){
+  /* ... */
+}</code></pre>
+                        <pre><code class="language-py"># Python counting sort
+def counting(arr):
+    pass</code></pre>
+                    </div>
                 </li>
-                <li><code>heap</code> — купа <a class="external-link" href="https://github.com/mykola-telychko/algorithms/tree/main/algorithms/sorts/heap">GH</a> 
+                <li>
+                    <code>heap</code> — купа <a class="external-link" href="https://github.com/mykola-telychko/algorithms/tree/main/algorithms/sorts/heap">GH</a> 
                     <a class="external-link" href="#">codepen</a>
+                    <div class="code-pair">
+                        <pre><code class="language-js">// JS heap sort
+function heapSort(arr){
+  /* ... */
+}</code></pre>
+                        <pre><code class="language-py"># Python heap sort
+def heap_sort(arr):
+    pass</code></pre>
+                    </div>
                 </li>
-                <li><code>insertion</code> — вставками <a class="external-link" href="#">GH</a> <a class="external-link" href="#">codepen</a></li>
-                <li><code>merge</code> — злиттям <a class="external-link" href="#">GH</a> <a class="external-link" href="#">codepen</a></li>
-                <li><code>quick</code> — швидке <a class="external-link" href="#">GH</a> <a class="external-link" href="#">codepen</a></li>
-                <li><code>radix</code> — по розрядах <a class="external-link" href="#">GH</a> <a class="external-link" href="#">codepen</a></li>
-                <li><code>selection</code> — вибором <a class="external-link" href="#">GH</a> <a class="external-link" href="#">codepen</a></li>
+                <li>
+                    <code>insertion</code> — вставками <a class="external-link" href="#">GH</a> <a class="external-link" href="#">codepen</a>
+                    <div class="code-pair">
+                        <pre><code class="language-js">// JS insertion sort
+function insertion(arr){
+  /* ... */
+}</code></pre>
+                        <pre><code class="language-py"># Python insertion sort
+def insertion(arr):
+    pass</code></pre>
+                    </div>
+                </li>
+                <li>
+                    <code>merge</code> — злиттям <a class="external-link" href="#">GH</a> <a class="external-link" href="#">codepen</a>
+                    <div class="code-pair">
+                        <pre><code class="language-js">// JS merge sort
+function mergeSort(arr){
+  /* ... */
+}</code></pre>
+                        <pre><code class="language-py"># Python merge sort
+def merge_sort(arr):
+    pass</code></pre>
+                    </div>
+                </li>
+                <li>
+                    <code>quick</code> — швидке <a class="external-link" href="#">GH</a> <a class="external-link" href="#">codepen</a>
+                    <div class="code-pair">
+                        <pre><code class="language-js">// JS quick sort
+function quick(arr){
+  /* ... */
+}</code></pre>
+                        <pre><code class="language-py"># Python quick sort
+def quick(arr):
+    pass</code></pre>
+                    </div>
+                </li>
+                <li>
+                    <code>radix</code> — по розрядах <a class="external-link" href="#">GH</a> <a class="external-link" href="#">codepen</a>
+                    <div class="code-pair">
+                        <pre><code class="language-js">// JS radix sort
+function radix(arr){
+  /* ... */
+}</code></pre>
+                        <pre><code class="language-py"># Python radix sort
+def radix(arr):
+    pass</code></pre>
+                    </div>
+                </li>
+                <li>
+                    <code>selection</code> — вибором <a class="external-link" href="#">GH</a> <a class="external-link" href="#">codepen</a>
+                    <div class="code-pair">
+                        <pre><code class="language-js">// JS selection sort
+function selection(arr){
+  /* ... */
+}</code></pre>
+                        <pre><code class="language-py"># Python selection sort
+def selection(arr):
+    pass</code></pre>
+                    </div>
+                </li>
             </ul>
 
         </main>
@@ -521,5 +645,9 @@
     <footer>
         © 2025 Algorithms | Twitter | GitHub | Всі матеріали у вільному доступі
     </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script>
+        hljs.highlightAll();
+    </script>
 </body>
 </html>
