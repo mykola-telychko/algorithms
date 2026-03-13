@@ -513,27 +513,35 @@
             <ul style="margin-left: 20px; margin-bottom: 20px;">
                 <li>
                     <code>bubble</code> — Бульбашкове сортування 
-                    <a class="external-link" href="https://github.com/mykola-telychko/algorithms/tree/main/algorithms/sorts/bubble">GH</a>,
-                    <a class="external-link" href="#">codepen</a>
+                    <a class="external-link" target="_blank" 
+                       href="https://github.com/mykola-telychko/algorithms/tree/main/algorithms/sorts/bubble">GH
+                    </a>,
+                    <a class="external-link" target="_blank" 
+                       href="https://codepen.io/telychko-mykola/pen/YPGNdga?editors=1111">codepen
+                    </a>
+
                     <div class="code-pair">
-                        <pre><code class="language-js">Array.prototype.bubblesort = function(){
-  var isSortedFlag = false;
-  while (!isSortedFlag) { 
+                        <pre>
+<code class="language-js">Array.prototype.bubblesort = function(){
+var isSortedFlag = false;
+while (!isSortedFlag) { 
     for ( let i = 1; i < this.length; i++ ) { 
-      isSortedFlag = true;
-      if(this[i - 1] > this[i]){
+    isSortedFlag = true;
+    if(this[i - 1] > this[i]){
         isSortedFlag = false;
         var tmpPrevNotSortedEl = this[i - 1];
         this[i - 1] = this[i]; 
         this[i] = tmpPrevNotSortedEl; 
-      }
     }
-  }
-  return this;
+    }
 }
-console.log(["G", "F", "C", "A", "B", "E", "D"].bubblesort());
-</code></pre>
-                        <pre><code class="language-py">def bubble_sort(seq):
+return this;
+}
+console.log(["G", "F", "A", "B", "E", "D"].bubblesort());</code>
+                        </pre>
+
+                        <pre>
+                            <code class="language-py">def bubble_sort(seq):
     changed = True
     while changed:
         changed = False
@@ -552,7 +560,9 @@ if __name__ == "__main__":
                 </li>
                 <li>
                     <code>counting</code> — Підрахункове сортування 
-                    <a class="external-link" href="https://github.com/mykola-telychko/algorithms/tree/main/algorithms/sorts/counting">GH</a>, 
+                    <a class="external-link" target="_blank" 
+                        href="https://github.com/mykola-telychko/algorithms/tree/main/algorithms/sorts/counting">GH
+                    </a>, 
                     <a class="external-link" href="#">codepen</a>
                     <div class="code-pair">
                         <pre><code class="language-js">// JS counting sort
@@ -565,7 +575,10 @@ def counting(arr):
                     </div>
                 </li>
                 <li>
-                    <code>heap</code> — купа <a class="external-link" href="https://github.com/mykola-telychko/algorithms/tree/main/algorithms/sorts/heap">GH</a> 
+                    <code>heap</code> — купа 
+                    <a class="external-link" target="_blank" 
+                       href="https://github.com/mykola-telychko/algorithms/tree/main/algorithms/sorts/heap">GH
+                    </a> 
                     <a class="external-link" href="#">codepen</a>
                     <div class="code-pair">
                         <pre><code class="language-js">// JS heap sort
