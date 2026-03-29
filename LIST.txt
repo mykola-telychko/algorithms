@@ -1,6 +1,9 @@
 timur+ilia Big-O
 https://www.youtube.com/watch?v=wVEi2B5edQY
 
+big o
+https://x.com/riazi_cafe_en/status/2033250195014930700?s=67
+
 1) bigO-notation -- as for js (murych)
 https://www.youtube.com/watch?v=Qfi0_0w0dsM
 ninjajs reaction 
