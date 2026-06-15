@@ -21,3 +21,6 @@ https://github.com/TheAlgorithms/PHP/blob/master/Sorting/BubbleSort.php
 
 > YWA:
 https://the-algorithms.com/
+
+.. дейкстра 
+https://youtu.be/m2IjD2XPNMw?si=7q9Ns2WcsRViHo83
